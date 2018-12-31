@@ -1,0 +1,86 @@
+* {
+    padding: 0px;
+    margin: 0px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+div#container {
+    display: inline-block;
+    border: 1px solid #000;
+    -webkit-border-radius:  5px;
+    -moz-border-radius:     5px;
+    border-radius:          5px;
+    padding: 20px;
+    -webkit-border-radius:  10px;
+    -moz-border-radius:     10px;
+    border-radius:          10px;
+    background-color:       #000;
+}
+table#cells-container {
+    border: 1px solid #00f;
+    background-color: black;
+    -webkit-box-shadow: 0 0 10px #00f;
+    -moz-box-shadow:    0 0 10px #00f;
+    box-shadow:         0 0 10px #00f;
+}
+td {
+    display: inline-block;
+    background-color: #abcdef;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    background-color: black;
+    -webkit-border-radius:  5px;
+    -moz-border-radius:     5px;
+    border-radius:          5px;
+}
+td.food {
+    border: 2px solid #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 26px;
+    -webkit-box-shadow: inset 0 0 10px yellow;
+    -moz-box-shadow:    inset 0 0 10px yellow;
+    box-shadow:         inset 0 0 10px yellow;
+}
+td.head {
+    -webkit-box-shadow: inset 0 0 10px #9600ff;
+    -moz-box-shadow:    inset 0 0 10px #9600ff;
+    box-shadow:         inset 0 0 10px #9600ff;
+    border: 1px solid #9600ff;
+}
+td.snake {
+    -webkit-box-shadow: inset 0 0 10px blue;
+    -moz-box-shadow:    inset 0 0 10px blue;
+    box-shadow:         inset 0 0 10px blue;
+    border: 1px solid blue;
+}
+td.empty {
+}
+input#Restart-Game-btn {
+    color: blue;
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    -webkit-border-radius:  5px;
+    -moz-border-radius:     5px;
+    border-radius:          5px;
+    -webkit-box-shadow: inset 0 0 10px blue;
+    -moz-box-shadow:    inset 0 0 10px blue;
+    box-shadow:         inset 0 0 10px blue;
+    border: 1px solid blue;
+}
+span#scorePlace {
+    padding: 2px;
+    text-align: left;
+    color: blue;
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
