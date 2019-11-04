@@ -6,8 +6,16 @@
     box-sizing: border-box;
 	background: #000000;
 }
+html {
+	width: 100%;
+	height: 100%;
+}
 body {
-    text-align: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
 }
 div#container {
     display: inline-block;
@@ -49,20 +57,24 @@ td.food {
     -webkit-box-shadow: inset 0 0 10px yellow;
     -moz-box-shadow:    inset 0 0 10px yellow;
     box-shadow:         inset 0 0 10px yellow;
+    /*background-image: url(img/food.png);*/
 }
 td.head {
     -webkit-box-shadow: inset 0 0 10px #9600ff;
     -moz-box-shadow:    inset 0 0 10px #9600ff;
     box-shadow:         inset 0 0 10px #9600ff;
     border: 1px solid #9600ff;
+    /*background-image: url(img/snakeHead.png);*/
 }
 td.snake {
     -webkit-box-shadow: inset 0 0 10px blue;
     -moz-box-shadow:    inset 0 0 10px blue;
     box-shadow:         inset 0 0 10px blue;
     border: 1px solid blue;
+    /*background-image: url(img/snakeBody.png);*/
 }
 td.empty {
+    /*background-image: url(img/empty.png);*/
 }
 input#Restart-Game-btn {
     color: blue;
