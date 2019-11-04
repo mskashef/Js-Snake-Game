@@ -5,6 +5,7 @@ let cells = []; // playground matrix
 let lost = false; // the gamer has lost or not
 let win = false; // the gamer has won or not
 let dir = "right"; // direction of movement
+let lastMove = "right"; // last move direction : it's used for detecting if the snake wants to go backward (& we prevent that on keyPress)
 /*
     in the matrix : |
                     |__ empty cells : -1
@@ -13,6 +14,7 @@ let dir = "right"; // direction of movement
 
     first we create the empty cells
     so :
+
     in the nested loops below we set all cells of the matrix to -1 (they are empty):
  */
 for (let i = 0; i < n; i++) {
@@ -47,7 +49,7 @@ window.addEventListener("keydown", function (event) {
             direction = dir;
             return;
     }
-    dir = (direction == oppositeOf(dir)) ? dir : direction;
+    dir = (direction == oppositeOf(lastMove)) ? dir : direction;
 });
 // on document ready -->
 $(document).ready(function() {
@@ -132,6 +134,7 @@ function allSubOne() {
 }
 // move right function
 function moveRight() {
+	lastMove = 'right'; // saving the move direction in the variable
     // if snake size is the maximum size(n*n), player wins
     if (snakeSize == n * n) win = true;
     // do not work(return) if player is lost or won
@@ -158,6 +161,7 @@ function moveRight() {
 }
 // move up function
 function moveUp() {
+	lastMove = 'up'; // saving the move direction in the variable
     // explanation as same as move-right-function
     if (snakeSize == n * n) win = true;
     if (win || lost) return;
@@ -183,6 +187,7 @@ function moveUp() {
 }
 // move left function
 function moveLeft() {
+	lastMove = 'left'; // saving the move direction in the variable
     // explanation as same as move-right-function
     if (snakeSize == n * n) win = true;
     if (win || lost) return;
@@ -208,6 +213,7 @@ function moveLeft() {
 }
 // move down function
 function moveDown() {
+	lastMove = 'down'; // saving the move direction in the variable
     // explanation as same as move-right-function
     if (snakeSize == n * n) win = true;
     if (win || lost) return;
@@ -260,7 +266,7 @@ function addFood() {
     $("span#scoreNumber").text(score); // show the new score to the user
     score++; // Increase the score
 }
-// move according to the move direction
+// the move function according to the move direction
 function move() {
     switch (dir) {
         case "right":
@@ -279,5 +285,6 @@ function move() {
 }
 // start moving of snake
 function startMoving() {
-    setInterval(move, 150);
+	setInterval(move, 150);
+
 }
