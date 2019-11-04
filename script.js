@@ -279,6 +279,5 @@ function move() {
 }
 // start moving of snake
 function startMoving() {
-    move();
-    setTimeout(startMoving, 150);
+    setInterval(move, 150);
 }
