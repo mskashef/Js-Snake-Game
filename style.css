@@ -4,6 +4,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+	background: #000000;
 }
 body {
     text-align: center;
@@ -27,6 +28,7 @@ table#cells-container {
     -moz-box-shadow:    0 0 10px #00f;
     box-shadow:         0 0 10px #00f;
 }
+
 td {
     display: inline-block;
     background-color: #abcdef;
